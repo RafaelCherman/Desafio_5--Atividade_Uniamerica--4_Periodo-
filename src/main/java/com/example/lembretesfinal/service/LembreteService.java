@@ -31,8 +31,8 @@ public class LembreteService {
         return lembretesDto;
     }
 
-    public List<LembreteDto> findByNome(String nome){
-        List<Lembrete> lembretes = this.lembreteRepository.findByNome(nome);
+    public List<LembreteDto> achaNome(String nome){
+        List<Lembrete> lembretes = this.lembreteRepository.getByNome(nome);
         List<LembreteDto> lembretesDto = new ArrayList<>();
 
         for(Lembrete i : lembretes)

@@ -30,10 +30,10 @@ public class LembreteController {
     }
 
     @GetMapping
-    public ResponseEntity<List<LembreteDto>> findByNome(@RequestParam("nome") final String nome){
+    public ResponseEntity<List<LembreteDto>> procuraNome(@RequestParam("nome") final String nome){
 
         try {
-            return ResponseEntity.ok(this.lembreteService.findByNome(nome));
+            return ResponseEntity.ok(this.lembreteService.achaNome(nome));
         }
         catch (Exception e)
         {

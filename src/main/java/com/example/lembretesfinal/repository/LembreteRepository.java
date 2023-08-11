@@ -16,7 +16,7 @@ public interface LembreteRepository extends JpaRepository<Lembrete, Long> {
     boolean doesExist(@Param("id") final Long id);
 
     @Query("select l from Lembrete l where l.pessoa.nome = :nome")
-    List<Lembrete> findByNome(@Param("nome") final String nome);
+    List<Lembrete> getByNome(@Param("nome") final String nome);
 
     @Query("select p from Pessoa p where p.id = :id")
     Pessoa getPessoaById(@Param("id") final Long id);
