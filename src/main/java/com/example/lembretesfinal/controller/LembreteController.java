@@ -55,7 +55,8 @@ public class LembreteController {
         }
     }
 
-    @PutMapping ResponseEntity<String> editar(
+    @PutMapping
+    public ResponseEntity<String> editar(
             @RequestParam("id") final Long id,
             @RequestBody final LembreteDto lembreteDto)
     {
@@ -70,7 +71,8 @@ public class LembreteController {
         }
     }
 
-    @DeleteMapping ResponseEntity<String> deletar(@RequestParam("id") final Long id)
+    @DeleteMapping
+    public ResponseEntity<String> deletar(@RequestParam("id") final Long id)
     {
         try {
             this.lembreteService.deletar(id);
