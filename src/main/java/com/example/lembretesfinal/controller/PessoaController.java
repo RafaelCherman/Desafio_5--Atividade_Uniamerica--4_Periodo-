@@ -55,7 +55,8 @@ public class PessoaController {
         }
     }
 
-    @PutMapping ResponseEntity<String> editar(
+    @PutMapping
+    public ResponseEntity<String> editar(
             @RequestParam("id") final Long id,
             @RequestBody final PessoaDto pessoaDto)
     {
@@ -70,7 +71,8 @@ public class PessoaController {
         }
     }
 
-    @DeleteMapping ResponseEntity<String> deletar(@RequestParam("id") final Long id)
+    @DeleteMapping
+    public ResponseEntity<String> deletar(@RequestParam("id") final Long id)
     {
         try {
             if(this.pessoaService.deletar(id)){

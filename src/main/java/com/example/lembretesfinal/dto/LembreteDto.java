@@ -1,8 +1,12 @@
 package com.example.lembretesfinal.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@AllArgsConstructor
+@NoArgsConstructor
 public class LembreteDto {
 
     @Getter @Setter
